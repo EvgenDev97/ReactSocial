@@ -1,0 +1,37 @@
+@import "Variable";
+
+.App{
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-auto-columns: 7% 1fr;
+  gap:15px;
+  grid-template-areas:
+  "h h"
+  "n c";
+  background-color: $background-color;
+  color:$text-color;
+  height: 100vh;
+  padding: 15px;
+  @include background
+}
+
+.header{
+  grid-area: h;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid $border-color;
+}
+
+.navigation{
+  grid-area: n;
+  width: 100%;
+  height: 100%;
+  border-right:1px solid $border-color ;
+}
+
+.content{
+  grid-area: c;
+  width: 100%;
+  height: 100%;
+}
+

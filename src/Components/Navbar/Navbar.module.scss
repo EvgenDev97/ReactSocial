@@ -1,0 +1,19 @@
+@import "../../Variable";
+
+.navigation{
+  text-decoration: none;
+}
+
+.link{
+  text-decoration: none;
+  color: $text-color;
+  &:focus,
+  &:active{
+    color: $active-color;
+    margin: 5px ;
+    font-size: 17px;
+  }
+  &:hover{
+    color: $hover-color ;
+  }
+}

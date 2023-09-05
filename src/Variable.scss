@@ -1,0 +1,31 @@
+$background-color: #60645a;
+$active-color: #0eaf11;
+$text-color: #e81212;
+$border-color: #c04b2b;
+$hover-color: blue;
+@mixin background{
+  background: url('./Components/img/logo.jpg') no-repeat center;
+  background-size: contain;
+;
+}
+//$laptop: 1024px;
+//$tablet: 768px;
+//$mobile: 540px;
+//
+//@mixin laptop{
+//  @media (max-width:#{$laptop}) {
+//    @content;
+//  }
+//};
+//
+//@mixin tablet {
+//  @media (max-width:#{$tablet}) {
+//    @content;
+//  }
+//};
+//
+//@mixin mobile {
+//  @media (max-width:#{$mobile}) {
+//    @content;
+//  }
+//};
