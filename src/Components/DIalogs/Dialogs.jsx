@@ -1,26 +1,20 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import Dialogitem from "./Dialog/Dialogitem";
-const Dialogs = () => {
+import s from "./Dialogs.module.scss"
+const Dialogs = (props) => {
 
-    let dialogs = [
-        {id:1, name:"nameOne"},
-        {id:2, name:"nameTwo"},
-        {id:3, name:"nameThree"}
-    ]
-
-    let msg = [
-        {id:1,msg:"Hey"},
-        {id:2,msg:"How`re you"},
-        {id:3, msg:"blablabla"}
-    ]
+    const {dialogs,msg} = props
 
 
-    return <div>
-        <div className="dialogs">
+
+
+    return <div className={s.dialogs}>
+        <div >
             {dialogs.map((d)=> <Dialogitem name={d.name} id={d.id} />)}
         </div>
-        <div></div>
+        <div>
+            {msg.map( m => <div key={m.id}>{m.msg}</div>)}
+        </div>
     </div>
 }
 

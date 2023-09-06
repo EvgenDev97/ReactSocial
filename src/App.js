@@ -7,12 +7,9 @@ import "normalize.css"
 import "./App.scss"
 import {Route,Routes} from "react-router-dom";
 
-function App() {
+function App(props) {
 
-
-
-
-
+    const {dialogs,posts,msg} = props
 
     return (
         <div className="App">
@@ -20,8 +17,8 @@ function App() {
             <Navbar/>
             <div>
                 <Routes>
-                    < Route path="/profile" element={<Profile />} />
-                    < Route path="/dialogs/*" element={<Dialogs />}/>
+                    < Route path="/profile" element={<Profile posts={posts}/>} />
+                    < Route path="/dialogs/*" element={<Dialogs dialogs={dialogs} msg={msg}/>}/>
                 </Routes>
             </div>
 
