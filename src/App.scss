@@ -12,7 +12,8 @@
   color:$text-color;
   height: 100vh;
   padding: 15px;
-  @include background
+  @include background;
+  z-index: 100;
 }
 
 .header{

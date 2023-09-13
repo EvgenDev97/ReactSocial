@@ -5,11 +5,12 @@ import Profile from "./Components/Profile/Profile";
 import Dialogs from "./Components/DIalogs/Dialogs";
 import "normalize.css"
 import "./App.scss"
-import {Route,Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
+import Friends from "./Components/Friends/Friends";
 
 function App(props) {
 
-    const {dialogs,posts,msg} = props
+    const {state, addPost, changeNewPostText} = props
 
     return (
         <div className="App">
@@ -17,8 +18,18 @@ function App(props) {
             <Navbar/>
             <div>
                 <Routes>
-                    < Route path="/profile" element={<Profile posts={posts}/>} />
-                    < Route path="/dialogs/*" element={<Dialogs dialogs={dialogs} msg={msg}/>}/>
+                    < Route path="/profile"
+                            element={<Profile
+                                profileState={state.profilePage}
+                                addPost={addPost}
+                                changeNewPostText={changeNewPostText}
+                            />}
+                    />
+                    < Route path="/dialogs/*"
+                            element={
+                                <Dialogs dialogsState={state.messagesPage}/>}/>
+
+                    <Route path="/friends/*" element={<Friends friendState={state.friendPage}/>}></Route>
                 </Routes>
             </div>
 
